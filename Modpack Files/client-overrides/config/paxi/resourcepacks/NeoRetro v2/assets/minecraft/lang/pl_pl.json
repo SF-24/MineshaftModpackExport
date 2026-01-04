@@ -8,6 +8,25 @@
 	"subtitles.entity.zombified_piglin.death": "Zombie pigman umiera",
 	"subtitles.entity.zombified_piglin.hurt": "Zombie pigman boli",
 
+  "block.minecraft.deepslate_coal_ore": "Ruda węgla",
+	"block.minecraft.deepslate_diamond_ore": "Ruda diamentu",
+	"block.minecraft.deepslate_emerald_ore": "Ruda szmaragdu",
+	"block.minecraft.deepslate_gold_ore": "Ruda złota",
+	"block.minecraft.deepslate_iron_ore": "Ruda żelaza",
+	"block.minecraft.deepslate_lapis_ore": "Ruda lazurytu",
+	"block.minecraft.deepslate_redstone_ore": "Ruda czerwonego kamienia",
+
+  "block.minecraft.coal_ore": "Ruda węgla",
+	"block.minecraft.diamond_ore": "Ruda diamentu",
+	"block.minecraft.emerald_ore": "Ruda szmaragdu",
+	"block.minecraft.gold_ore": "Ruda złota",
+	"block.minecraft.iron_ore": "Ruda żelaza",
+	"block.minecraft.lapis_ore": "Ruda lazurytu",
+	"block.minecraft.redstone_ore": "Ruda czerwonego kamienia",	
+
+	"block.minecraft.nether_quartz_ore": "Ruda kwarcu",	
+  "block.minecraft.nether_gold_ore": "Ruda złota",
+
 	"advancements.story.follow_ender_eye.description": "Pod\u0105\u017caj za okiem Kresu",
   "block.minecraft.end_gateway": "Brama Kresu",
 	"block.minecraft.end_portal": "Portal Kresu",
@@ -35,10 +54,8 @@
 	"flat_world_preset.minecraft.redstone_ready": "Gotowy pod czerowny kamień",
 	"itemGroup.redstone": "Czerwony pył",
 
-	"block.minecraft.deepslate_redstone_ore": "Ruda czerwonego kamienia",
   "block.minecraft.redstone_block": "Blok czerwonego kamienia",
 	"block.minecraft.redstone_lamp": "Lampa czerwonego kamienia",
-	"block.minecraft.redstone_ore": "Ruda czerwonego kamienia",
 	"block.minecraft.redstone_torch": "Czerwona Pochodnia",
 	"block.minecraft.redstone_wall_torch": "\u015acienna czerowa pochodnia",
 	"block.minecraft.redstone_wire": "Przew\u00f3d czerwonego pyłu",
@@ -81,7 +98,6 @@
 	"block.minecraft.crimson_door": "Piekielne drzwi",	
 	"block.minecraft.crimson_fence": "Piekielny płot",	
 	"block.minecraft.crimson_fence_gate": "Piekielna furtka",	
-  "block.minecraft.nether_gold_ore": "Ruda złota",
 
 	"block.minecraft.oak_log": "Dębowe drewno",
 	"block.minecraft.birch_log": "Brzozowe drewno",
