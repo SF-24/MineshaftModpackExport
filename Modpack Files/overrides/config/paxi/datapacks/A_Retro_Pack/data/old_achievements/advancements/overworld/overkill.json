@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_sword"
+    },
+    "title": "Overkill",
+    "description": "Deal eight hearts of damage in a single hit.",
+    "frame": "challenge"
+  },
+  "parent": "old_achievements:overworld/enchantments",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 18
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "itemGroup.elementary-staffs.staffs": "Laski",
+    "itemGroup.elementary-staffs.grenade": "Butelki",
+
+    "item.elementary-staffs.staff": "Laska gandalfa",
+    "item.elementary-staffs.staff.heal": "§bLaska leczenia",
+    "item.elementary-staffs.staff.electric": "§bElektryczna laska",
+    "item.elementary-staffs.staff.fire": "§bPłomienna laska",
+    "item.elementary-staffs.staff.ice": "§bMrożąca laska",
+    "item.elementary-staffs.staff.poison": "§bZatruta laska",
+    "item.elementary-staffs.staff.darkness": "§bLaska Saurona",
+    "item.elementary-staffs.staff.water": "§bMokra laska",
+    "item.elementary-staffs.staff.wind": "§bWietrzysta laska",
+
+    "item.elementary-staffs.grenade.fire": "Płomienna butelka",
+
+    "enchantment.elementary-staffs.magical_power": "???",
+    "enchantment.elementary-staffs.magical_power.desc": "Zmień moc laski",
+
+    "text.config.elementary-staffs.title": "Konfiguracja lasek"
+
+}

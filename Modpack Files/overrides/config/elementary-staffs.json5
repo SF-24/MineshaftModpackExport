@@ -1,0 +1,7 @@
+{
+	"dungeonLoot": false,
+	"magicalPowerEnchantment": false,
+	"cooldownStaffs": true,
+	"cooldownGrenades": false,
+	"blacklistedModIds": []
+}

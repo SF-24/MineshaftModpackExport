@@ -1,0 +1,58 @@
+{
+  // ----------------------------------------------------------------------------------------------------------------
+  //                                     You Shall Not Spawn by ElocinDev.
+  //                                          disabled_entities.json5
+  // ----------------------------------------------------------------------------------------------------------------
+  //  
+  // Here you can disable entities from spawning globally, with no exceptions.
+  // Format: "modid:entity_name"
+  // Example: "minecraft:zombie"
+  //  
+  // Note: As a more advanced method, you can use regex by starting the entry with !
+  // Format: "!{Regular expression}"
+  // Example: "!minecraft:.*" will disable all entities from minecraft. (NOT RECOMMENDED, JUST AN EXAMPLE)
+  //  
+  "disabled": [
+	"minecraft:piglin",
+	"minecraft:piglin_brute",
+	"minecraft:hoglin",
+	"minecraft:zoglin",
+	"minecraft:vindicator",
+	"minecraft:pillager",
+	"minecraft:ravager",
+	"minecraft:phantom",
+	"minecraft:drowned",
+	"minecraft:husk",
+	"minecraft:stray",
+	"minecraft:shulker",
+	"minecraft:warden",
+	"minecraft:zombie_villager",
+	"minecraft:illusioner",
+	"minecraft:allay",
+	"minecraft:armadillo",
+	"minecraft:axolotl",
+	"minecraft:camel",
+	"minecraft:cod",
+	"minecraft:salmon",
+	"minecraft:tropical_fish",
+	"minecraft:pufferfish",
+	"minecraft:frog",
+	"minecraft:tadpole",
+	"minecraft:glow_squid",
+	"minecraft:parrot",
+	"minecraft:sniffer",
+	"minecraft:turtle",
+	"minecraft:dolphin",
+	"minecraft:strider",
+	"minecraft:bee",
+	"minecraft:fox",
+	"minecraft:polar_bear",
+	"minecraft:goat",
+	"minecraft:llama",
+	"minecraft:trader_llama",
+	"minecraft:panda",
+	"minecraft:villager"
+  ],
+  // Don't touch this!
+  "CONFIG_VERSION": 1
+}

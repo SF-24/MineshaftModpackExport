@@ -1,0 +1,45 @@
+[
+  {
+    "hordeName": "zombiehorde",
+    "findSpawnAttempts": 3,
+    "maximumActiveHordeMembers":8,
+    "killsRequiredForEasy": 8,
+    "killsRequiredForNormal": 12,
+    "killsRequiredForHard": 12,
+    "despawnLeftBehindMembers": false,
+    "keepSpawningEnemiesWhileBossIsActive": false,
+    "bossInfoColor":"red",
+    "bossInfoText":"Zombie Horde",
+    "mobData": [
+      {
+        "mobID": "minecraft:zombie",
+        "spawnWeight": 7,
+        "goalPriority": 2,
+        "goalMovementSpeed": 1,
+        "nbtData": "{PersistenceRequired:1}"
+      }
+    ]
+  },
+  {
+    "hordeName": "skeletonhorde",
+    "findSpawnAttempts": 3,
+    "maximumActiveHordeMembers":8,
+    "killsRequiredForEasy": 8,
+    "killsRequiredForNormal": 12,
+    "killsRequiredForHard": 12,
+    "despawnLeftBehindMembers": false,
+    "keepSpawningEnemiesWhileBossIsActive": false,
+    "bossInfoColor":"red",
+    "bossInfoText":"Skeleton Horde",
+    "mobData": [
+      {
+        "mobID": "minecraft:skeleton",
+        "spawnWeight": 7,
+        "goalPriority": 2,
+        "goalMovementSpeed": 1,
+        "nbtData": "{PersistenceRequired:1}"
+      }
+    ]
+  }
+
+]

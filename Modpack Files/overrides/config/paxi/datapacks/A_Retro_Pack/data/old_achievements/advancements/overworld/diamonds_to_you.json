@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond"
+    },
+    "title": "Diamonds to You!",
+    "description": "Throw diamonds at another player.",
+    "frame": "task"
+  },
+  "parent": "old_achievements:overworld/diamonds",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:diamond"
+          ]
+        }
+      }
+    }
+  }
+}

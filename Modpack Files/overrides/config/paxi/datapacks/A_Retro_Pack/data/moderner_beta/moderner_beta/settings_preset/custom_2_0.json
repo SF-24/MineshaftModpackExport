@@ -1,0 +1,898 @@
+{
+  "biomeSettings": {
+    "moderner_beta:fractal_layers": {
+      "pipeline": [
+        {
+          "id": "land",
+          "seed": 1,
+          "landChance": 10,
+          "type": "moderner_beta:init_land"
+        },
+        {
+          "id": "land",
+          "seed": 2000,
+          "parent": "land",
+          "type": "moderner_beta:fuzzy_zoom"
+        },
+        {
+          "biomeSpecificOceans": {
+            "minecraft:snowy_plains": "minecraft:frozen_ocean"
+          },
+          "landChance": 3,
+          "oceanChance": 5,
+          "ocean": "minecraft:ocean",
+          "land": "minecraft:plains",
+          "id": "land",
+          "seed": 1,
+          "parent": "land",
+          "betaShape": false,
+          "type": "moderner_beta:add_land"
+        },
+        {
+          "id": "land",
+          "seed": 2001,
+          "parent": "land",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "biomeSpecificOceans": {
+            "minecraft:snowy_plains": "minecraft:frozen_ocean"
+          },
+          "landChance": 3,
+          "oceanChance": 5,
+          "ocean": "minecraft:ocean",
+          "land": "minecraft:plains",
+          "id": "land",
+          "seed": 2,
+          "parent": "land",
+          "betaShape": false,
+          "type": "moderner_beta:add_land"
+        },
+        {
+          "id": "snow",
+          "seed": 2,
+          "targets": [
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:snowy_plains"
+              },
+              "weight": 3
+            },
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:ice_spikes"
+              },
+              "weight": 1
+            },
+            {
+              "data": {
+                "type": "biome",
+                "value": "moderner_beta:early_release_taiga"
+              },
+              "weight": 1
+            },
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:the_void*null"
+              },
+              "weight": 16
+            }
+          ],
+          "type": "moderner_beta:weighted_pool"
+        },
+        {
+          "id": "land",
+          "seed": 0,
+          "parent": "land",
+          "targets": {
+            "minecraft:plains": {
+              "type": "layer",
+              "value": "snow"
+            }
+          },
+          "type": "moderner_beta:biome_replacement"
+        },
+        {
+          "id": "land",
+          "seed": 2002,
+          "parent": "land",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "biomeSpecificOceans": {
+            "minecraft:snowy_plains": "minecraft:frozen_ocean"
+          },
+          "landChance": 3,
+          "oceanChance": 5,
+          "ocean": "minecraft:ocean",
+          "land": "minecraft:plains",
+          "id": "land",
+          "seed": 3,
+          "parent": "land",
+          "betaShape": false,
+          "type": "moderner_beta:add_land"
+        },
+        {
+          "id": "land",
+          "seed": 2003,
+          "parent": "land",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "biomeSpecificOceans": {
+            "minecraft:snowy_plains": "minecraft:frozen_ocean"
+          },
+          "landChance": 3,
+          "oceanChance": 5,
+          "ocean": "minecraft:ocean",
+          "land": "minecraft:plains",
+          "id": "land",
+          "seed": 4,
+          "parent": "land",
+          "betaShape": false,
+          "type": "moderner_beta:add_land"
+        },
+        {
+          "predicate": {
+            "terms": [
+              {
+                "biome": "minecraft:ocean",
+                "condition": "moderner_beta:single_match"
+              },
+              {
+                "requiredCount": 4,
+                "diagonal": true,
+                "condition": "moderner_beta:identical_neighbor"
+              },
+              {
+                "numerator": 1,
+                "denominator": 100,
+                "condition": "moderner_beta:random_chance"
+              }
+            ],
+            "condition": "moderner_beta:all_of"
+          },
+          "onMatch": {
+            "type": "biome",
+            "value": "minecraft:mushroom_fields"
+          },
+          "otherwise": {
+            "type": "biome",
+            "value": "minecraft:the_void*null"
+          },
+          "id": "land",
+          "seed": 5,
+          "parent": "land",
+          "type": "moderner_beta:conditional_overlay"
+        },
+        {
+          "predicate": {
+            "terms": [
+              {
+                "biome": "minecraft:ocean",
+                "condition": "moderner_beta:single_match"
+              },
+              {
+                "requiredCount": 3,
+                "diagonal": true,
+                "condition": "moderner_beta:identical_neighbor"
+              },
+              {
+                "numerator": 1,
+                "denominator": 65,
+                "condition": "moderner_beta:random_chance"
+              }
+            ],
+            "condition": "moderner_beta:all_of"
+          },
+          "onMatch": {
+            "type": "biome",
+            "value": "minecraft:plains"
+          },
+          "otherwise": {
+            "type": "biome",
+            "value": "minecraft:the_void*null"
+          },
+          "id": "land",
+          "seed": 10928401780,
+          "parent": "land",
+          "type": "moderner_beta:conditional_overlay"
+        },
+        {
+          "id": "river",
+          "seed": 100,
+          "parent": "land",
+          "type": "moderner_beta:init_river"
+        },
+        {
+          "level": 6,
+          "seedModifier": 1,
+          "zoomType": "modal",
+          "id": "river",
+          "seed": 1000,
+          "parent": "river",
+          "type": "moderner_beta:stacked_zoom"
+        },
+        {
+          "id": "river",
+          "seed": 0,
+          "parent": "river",
+          "convertOceans": true,
+          "type": "moderner_beta:compute_river"
+        },
+        {
+          "id": "river",
+          "seed": 1000,
+          "parent": "river",
+          "type": "moderner_beta:smooth"
+        },
+        {
+          "id": "biome_pool",
+          "seed": 200,
+          "biomes": [
+            "minecraft:desert",
+              "minecraft:wooded_badlands",
+              "minecraft:badlands",
+              
+              "minecraft:desert",
+              "minecraft:desert",
+              "minecraft:desert",
+              "minecraft:savanna",
+              "minecraft:savanna",
+              "minecraft:plains",
+              
+              "minecraft:jungle",
+              "minecraft:tropical_swampland",
+              "hybrid_beta:rainforest",
+
+              "hybrid_beta:temperate_rainforest",
+              "moderner_beta:late_beta_plains",
+              "hybrid_beta:seasonal_forest",
+              "minecraft:flower_forest",
+              
+              "minecraft:dark_forest",
+              "moderner_beta:early_release_extreme_hills",
+              "minecraft:plains",
+              "minecraft:birch_forest",
+              "moderner_beta:early_release_swampland",
+              "minecraft:roofed_swamp",
+          
+              "minecraft:forest",
+              "hybrid_beta:autumnal_forest",
+              "minecraft:snowless_taiga",
+              "minecraft:mega_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_extreme_hills"
+          ],
+          "type": "moderner_beta:random_biome"
+        },
+        {
+          "id": "ice_plains",
+          "seed": 0,
+          "biome": "moderner_beta:early_release_ice_plains",
+          "type": "moderner_beta:constant_biome"
+        },
+        {
+          "id": "land",
+          "seed": 0,
+          "parent": "land",
+          "targets": {
+            "minecraft:frozen_ocean": {
+              "type": "layer",
+              "value": "ice_plains"
+            },
+            "minecraft:plains": {
+              "type": "layer",
+              "value": "biome_pool"
+            },
+            "minecraft:snowy_plains": {
+              "type": "layer",
+              "value": "ice_plains"
+            }
+          },
+          "type": "moderner_beta:biome_replacement"
+        },
+        {
+          "level": 2,
+          "seedModifier": 1,
+          "zoomType": "modal",
+          "id": "land",
+          "seed": 1000,
+          "parent": "land",
+          "type": "moderner_beta:stacked_zoom"
+        },
+        {
+          "id": "hills",
+          "seed": 0,
+          "parent": "land",
+          "targets": {
+            "moderner_beta:early_release_ice_plains": {
+                "type": "biome",
+                "value": "moderner_beta:early_release_ice_plains*hills"
+              },
+              "minecraft:desert": {
+                "type": "biome",
+                "value": "minecraft:desert*hills"
+              },
+              "minecraft:forest": {
+                "type": "biome",
+                "value": "minecraft:forest*hills"
+              },
+              "minecraft:jungle": {
+                "type": "biome",
+                "value": "minecraft:jungle*hills"
+              },
+              "moderner_beta:early_release_taiga": {
+                "type": "biome",
+                "value": "moderner_beta:early_release_taiga*hills"
+              },
+          "minecraft:birch_forest": {
+                "type": "biome",
+                "value": "minecraft:birch_forest*hills"
+              },
+          "minecraft:savanna": {
+                "type": "biome",
+                "value": "minecraft:savanna*hills"
+              },
+          "minecraft:snowless_taiga": {
+                "type": "biome",
+                "value": "minecraft:snowless_taiga*hills"
+              },
+          "minecraft:flower_forest": {
+                "type": "biome",
+                "value": "minecraft:flower_forest*hills"
+              },
+          "minecraft:dark_forest": {
+                "type": "biome",
+                "value": "minecraft:dark_forest*hills"
+              },
+          "hybrid_beta:autumnal_forest": {
+                "type": "biome",
+                "value": "hybrid_beta:autumnal_forest*hills"
+              },
+          "hybrid_beta:rainforest": {
+                "type": "biome",
+                "value": "hybrid_beta:rainforest*hills"
+              },
+          "hybrid_beta:seasonal_forest": {
+                "type": "biome",
+                "value": "hybrid_beta:seasonal_forest*hills"
+              },
+          "hybrid_beta:temperate_rainforest": {
+                "type": "biome",
+                "value": "hybrid_beta:temperate_rainforest*hills"
+              },
+          "minecraft:badlands": {
+                "type": "biome",
+                "value": "minecraft:eroded_badlands"
+              },
+              "moderner_beta:late_beta_plains": {
+                "type": "biome",
+                "value": "minecraft:forest"
+              }
+            },
+          "type": "moderner_beta:biome_replacement"
+        },
+        {
+          "predicate": {
+            "terms": [
+              {
+                "biomes": [
+             "minecraft:desert",
+              "minecraft:wooded_badlands",
+              "minecraft:badlands",
+              
+              "minecraft:desert",
+              "minecraft:desert",
+              "minecraft:desert",
+              "minecraft:savanna",
+              "minecraft:savanna",
+              "minecraft:plains",
+              
+              "minecraft:jungle",
+              "minecraft:tropical_swampland",
+              "hybrid_beta:rainforest",
+
+              "hybrid_beta:temperate_rainforest",
+              "moderner_beta:late_beta_plains",
+              "hybrid_beta:seasonal_forest",
+              "minecraft:flower_forest",
+              
+              "minecraft:dark_forest",
+              "moderner_beta:early_release_extreme_hills",
+              "minecraft:plains",
+              "minecraft:birch_forest",
+              "moderner_beta:early_release_swampland",
+              "minecraft:roofed_swamp",
+          
+              "minecraft:forest",
+              "hybrid_beta:autumnal_forest",
+              "minecraft:snowless_taiga",
+              "minecraft:mega_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_taiga",
+              "moderner_beta:early_release_extreme_hills"
+                ],
+                "condition": "moderner_beta:in_set"
+              },
+              {
+                "requiredCount": 4,
+                "diagonal": false,
+                "condition": "moderner_beta:identical_neighbor"
+              },
+              {
+                "numerator": 1,
+                "denominator": 2,
+                "condition": "moderner_beta:random_chance"
+              }
+            ],
+            "condition": "moderner_beta:all_of"
+          },
+          "onMatch": {
+            "type": "layer",
+            "value": "hills"
+          },
+          "otherwise": {
+            "type": "biome",
+            "value": "minecraft:the_void*null"
+          },
+          "id": "land",
+          "seed": 1000,
+          "parent": "land",
+          "type": "moderner_beta:conditional_overlay"
+        },
+        {
+          "id": "land_0",
+          "seed": 1000,
+          "parent": "land",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "biomeSpecificOceans": {
+            "moderner_beta:early_release_ice_plains": "minecraft:frozen_ocean"
+          },
+          "landChance": 3,
+          "oceanChance": 5,
+          "ocean": "minecraft:ocean",
+          "land": "moderner_beta:late_beta_plains",
+          "id": "land_0",
+          "seed": 3,
+          "parent": "land_0",
+          "betaShape": false,
+          "type": "moderner_beta:add_land"
+        },
+        {
+          "id": "land_1",
+          "seed": 1001,
+          "parent": "land_0",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "id": "land_1",
+          "seed": 0,
+          "parent": "land_1",
+          "targets": [
+            {
+              "predicate": {
+                "terms": [
+                  {
+                    "biome": "minecraft:mushroom_fields",
+                    "condition": "moderner_beta:single_match"
+                  },
+                  {
+                    "requiredCount": 1,
+                    "diagonal": false,
+                    "neighborPredicate": {
+                      "biome": "minecraft:ocean",
+                      "condition": "moderner_beta:single_match"
+                    },
+                    "condition": "moderner_beta:neighbor_match"
+                  }
+                ],
+                "condition": "moderner_beta:all_of"
+              },
+              "result": "minecraft:mushroom_fields*shore",
+              "type": "biome"
+            },
+            {
+              "predicate": {
+                "terms": [
+                  {
+                    "term": {
+                      "biomes": [
+                        "moderner_beta:early_release_extreme_hills",
+                        "minecraft:river",
+                        "minecraft:ocean",
+                        "minecraft:roofed_swamp",
+                        "moderner_beta:early_release_swampland"
+                      ],
+                      "condition": "moderner_beta:in_set"
+                    },
+                    "condition": "moderner_beta:inverted"
+                  },
+                  {
+                    "requiredCount": 1,
+                    "diagonal": false,
+                    "neighborPredicate": {
+                      "biome": "minecraft:ocean",
+                      "condition": "moderner_beta:single_match"
+                    },
+                    "condition": "moderner_beta:neighbor_match"
+                  }
+                ],
+                "condition": "moderner_beta:all_of"
+              },
+              "result": "minecraft:beach",
+              "type": "biome"
+            },
+            {
+              "predicate": {
+                "terms": [
+                  {
+                    "biome": "moderner_beta:early_release_extreme_hills",
+                    "condition": "moderner_beta:single_match"
+                  },
+                  {
+                    "requiredCount": 1,
+                    "diagonal": false,
+                    "condition": "moderner_beta:unique_neighbor"
+                  }
+                ],
+                "condition": "moderner_beta:all_of"
+              },
+              "result": "moderner_beta:early_release_extreme_hills*edge",
+              "type": "biome"
+            }
+          ],
+          "type": "moderner_beta:predicate_overlay"
+        },
+        {
+          "id": "jungle_lakes",
+          "seed": 1000,
+          "targets": [
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:river"
+              },
+              "weight": 1
+            },
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:the_void*null"
+              },
+              "weight": 7
+            }
+          ],
+          "type": "moderner_beta:weighted_pool"
+        },
+        {
+          "id": "swamp_lakes",
+          "seed": 1000,
+          "targets": [
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:river"
+              },
+              "weight": 1
+            },
+            {
+              "data": {
+                "type": "biome",
+                "value": "minecraft:the_void*null"
+              },
+              "weight": 5
+            }
+          ],
+          "type": "moderner_beta:weighted_pool"
+        },
+        {
+          "id": "land_1",
+          "seed": 1000,
+          "parent": "land_1",
+          "targets": [
+            {
+              "predicate": {
+                "biome": "~moderner_beta:early_release_swampland",
+                "condition": "moderner_beta:single_match"
+              },
+              "result": "swamp_lakes",
+              "type": "layer"
+            },
+            {
+              "predicate": {
+                "biome": "~minecraft:jungle",
+                "condition": "moderner_beta:single_match"
+              },
+              "result": "jungle_lakes",
+              "type": "layer"
+            },
+            {
+              "predicate": {
+                "biome": "~minecraft:tropical_swampland",
+                "condition": "moderner_beta:single_match"
+              },
+              "result": "jungle_lakes",
+              "type": "layer"
+            },
+            {
+              "predicate": {
+                "biome": "~minecraft:roofed_swamp",
+                "condition": "moderner_beta:single_match"
+              },
+              "result": "jungle_lakes",
+              "type": "layer"
+            }
+          ],
+          "type": "moderner_beta:predicate_overlay"
+        },
+        {
+          "id": "land_2",
+          "seed": 1001,
+          "parent": "land_1",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "id": "land_3",
+          "seed": 1002,
+          "parent": "land_2",
+          "type": "moderner_beta:modal_zoom"
+        },
+        {
+          "id": "land",
+          "seed": 1000,
+          "parent": "land_3",
+          "type": "moderner_beta:smooth"
+        },
+        {
+          "riverSource": "river",
+          "ignoredBiomes": [
+            "minecraft:ocean"
+          ],
+          "biomeSpecificRivers": {
+            "minecraft:mushroom_fields": "minecraft:mushroom_fields*shore",
+            "minecraft:mushroom_fields*shore": "minecraft:mushroom_fields*shore",
+            "moderner_beta:early_release_ice_plains": "minecraft:frozen_river",
+            "moderner_beta:late_beta_ice_plains": "minecraft:frozen_river"
+          },
+          "id": "land",
+          "seed": 0,
+          "parent": "land",
+          "type": "moderner_beta:mix_river"
+        }
+      ],
+      "outputs": {
+        "moderner_beta:biome": "land",
+        "moderner_beta:climate_0": "land_0",
+        "moderner_beta:climate_2": "land_2",
+        "moderner_beta:climate_1": "land_1",
+        "moderner_beta:climate_3": "land_3"
+      }
+    },
+    "moderner_beta:provider": "moderner_beta:fractal",
+    "moderner_beta:temperature_height_scaling": "none"
+  },
+  "caveBiomeSettings": {
+    "moderner_beta:cave_biome_voronoi": {
+      "depthMinY": -64,
+      "depthMaxY": 64,
+      "points": [
+        {
+          "biome": "",
+          "temp": 0.0,
+          "rain": 0.5,
+          "depth": 0.75
+        },
+        {
+          "biome": "minecraft:lush_caves",
+          "temp": 0.1,
+          "rain": 0.5,
+          "depth": 0.75
+        },
+        {
+          "biome": "",
+          "temp": 0.5,
+          "rain": 0.5,
+          "depth": 0.75
+        },
+        {
+          "biome": "",
+          "temp": 0.9,
+          "rain": 0.5,
+          "depth": 0.75
+        },
+        {
+          "biome": "",
+          "temp": 1.0,
+          "rain": 0.5,
+          "depth": 0.75
+        },
+        {
+          "biome": "",
+          "temp": 0.0,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "minecraft:lush_caves",
+          "temp": 0.2,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "",
+          "temp": 0.4,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "",
+          "temp": 0.5,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "",
+          "temp": 0.6,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "",
+          "temp": 0.8,
+          "rain": 0.5,
+          "depth": 0.25
+        },
+        {
+          "biome": "",
+          "temp": 1.0,
+          "rain": 0.5,
+          "depth": 0.25
+        }
+      ],
+      "horizontalScale": 32.0,
+      "verticalScale": 16.0
+    },
+    "moderner_beta:provider": "moderner_beta:voronoi"
+  },
+  "chunkSettings": {
+    "moderner_beta:sea_level": 63,
+    "moderner_beta:provider": "moderner_beta:noise_3d",
+    "moderner_beta:perlin_noise_settings": {
+      "alpha2DSampling": false,
+      "infdevNoiseScaling": false,
+      "failurePoint": 2147483647,
+      "wrapped": true,
+      "randomNoiseOffsets": true
+    },
+    "moderner_beta:cave_generation": {
+      "forceBetaCaves": true,
+      "forceBetaCanyons": true,
+      "seedMethod": "early_release",
+      "useCarvers": true,
+      "useNoiseCaves": false,
+      "fixCaveBorders": true
+    },
+    "moderner_beta:isles_properties": {
+      "centerOceanFalloffDistance": 16,
+      "outerIslandNoiseScale": 300.0,
+      "outerIslandNoiseOffset": 0.8,
+      "centerIslandFalloffDistance": 8,
+      "centerOceanRadius": 64,
+      "oceanSlideTarget": -200.0,
+      "centerIslandShape": "circle",
+      "centerIslandRadius": 48,
+      "useIslands": true,
+      "useOuterIslands": true
+    },
+    "moderner_beta:deepslate_generation": {
+      "enabled": false,
+      "minY": 0,
+      "maxY": 8,
+      "block": "minecraft:deepslate"
+    },
+    "moderner_beta:noise_slide": {
+      "bottomTarget": 15,
+      "bottomSize": 3,
+      "bottomOffset": 0,
+      "topTarget": -10,
+      "topSize": 3,
+      "topOffset": 0
+    },
+    "moderner_beta:use_surface_rules": false,
+    "moderner_beta:forced_biome_height": {
+      "scaleWeight": 1.7,
+      "scaleOffset": 0.6,
+      "modifyOnlyPositiveDepth": true,
+      "enabled": true,
+      "heightOverrides": {},
+      "depthWeight": 1.0,
+      "depthOffset": 0.2
+    },
+    "moderner_beta:surface_properties": {
+      "generateSandstone": true,
+      "erosion": true,
+      "gravelOceanBed": false,
+      "gravelBeachScale": 0.03125,
+      "surfaceNoiseScale": 0.0625,
+      "generateBeaches": true,
+      "flipNoiseCoordinates": false,
+      "enableBeaches": true,
+      "sandBeachScale": 0.03125,
+      "generateLiquids": true,
+      "generateBedrock": true,
+      "bedrockHoles": false
+    },
+    "moderner_beta:noise_3d_settings": {
+      "arraySurfaceNoise": true,
+      "simplexSurfaceNoise": false,
+      "pocketEditionRng": false,
+      "monoliths": false,
+      "oldInfdevTerrainNoise": false,
+      "climateHeightScaling": false
+    },
+    "moderner_beta:noise_generator_settings": "moderner_beta:overworld_128",
+    "moderner_beta:noise_landmass": {
+      "depth": {
+        "minValue": -0.35714287,
+        "maxValue": 0.125,
+        "negativeFlattening": false,
+        "offset": -2.0,
+        "positiveDampening": 8.0,
+        "negativeDampening": 5.6,
+        "influence": 0.2,
+        "negativeInfluence": 0.3,
+        "stretch": 3.0,
+        "enabled": true,
+        "sample": true
+      },
+      "scale": {
+        "variation": 1.121,
+        "influence": 0.0,
+        "offset": 0.0,
+        "enabled": true,
+        "sample": false
+      },
+      "alphaSampling": false
+    },
+    "moderner_beta:noise_settings": {
+      "min_y": 0,
+      "height": 192,
+      "size_horizontal": 1,
+      "size_vertical": 2
+    },
+    "moderner_beta:noise_scale": {
+      "limitBlending": 10.0,
+      "useFixedOffset": false,
+      "fixedOffset": 1.0,
+      "forestNoiseOctaves": 8,
+      "mainNoiseZ": 80.0,
+      "baseSize": 8.5,
+      "stretchY": 12.0,
+      "densityUnderdamp": 4.0,
+      "depthNoiseX": 200.0,
+      "depthNoiseZ": 200.0,
+      "mainNoiseX": 80.0,
+      "mainNoiseY": 160.0,
+      "coordinate": 684.412,
+      "height": 684.412,
+      "upperLimit": 512.0,
+      "lowerLimit": 512.0
+    }
+  },
+  "description": {
+    "translate": "The default world for 2.0"
+  },
+  "name": {
+    "color": "yellow",
+    "translate": "2.0 Random Biomes"
+  }
+}

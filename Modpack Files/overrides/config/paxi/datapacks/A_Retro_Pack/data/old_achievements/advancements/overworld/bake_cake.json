@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cake"
+    },
+    "title": "The Lie",
+    "description": "Wheat, sugar, milk, and eggs!",
+    "frame": "task"
+  },
+  "parent": "old_achievements:overworld/build_hoe",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cake"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

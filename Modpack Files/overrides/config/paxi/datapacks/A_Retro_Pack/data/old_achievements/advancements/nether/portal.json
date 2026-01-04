@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "title": "We Need to Go Deeper",
+    "description": "Build a portal to the Nether.",
+    "background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+    "frame": "task"
+  },
+  "parent": "old_achievements:nether/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  }
+}

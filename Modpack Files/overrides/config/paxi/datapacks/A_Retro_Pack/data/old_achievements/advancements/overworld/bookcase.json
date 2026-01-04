@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bookshelf"
+    },
+    "title": "Librarian",
+    "description": "Build some bookshelves to improve your enchantment table.",
+    "frame": "task"
+  },
+  "parent": "old_achievements:overworld/enchantments",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bookshelf"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

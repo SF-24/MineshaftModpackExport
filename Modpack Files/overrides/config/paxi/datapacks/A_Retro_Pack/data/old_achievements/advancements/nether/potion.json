@@ -1,0 +1,17 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt": "{Potion:\"minecraft:water\"}"
+    },
+    "title": "Local Brewery",
+    "description": "Brew a potion.",
+    "frame": "task"
+  },
+  "parent": "old_achievements:nether/blazerod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:brewed_potion"
+    }
+  }
+}

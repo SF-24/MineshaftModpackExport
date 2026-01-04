@@ -1,0 +1,206 @@
+/*
+This file uses the ".json5" file extension which allows for comments like this in a json file!
+Your text editor may show this file with invalid/no syntax, if so, we recommend you download:
+
+VSCode: https://code.visualstudio.com/
+JSON5 plugin(for VSCode): https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-json5
+
+to make editing this file much easier.
+*/
+{
+	// Generates all block states for all blocks in the registry.
+	"generate_all_known_states": true,
+	// Whether blocks are replaced in existing chunks.
+	"retro_gen": false,
+	/* A map of states that specifies what the "old" block state is and what its "new" block state is.
+	   See "known_states" folder("generate_all_known_states" must be set to true in this config) to see all known block states available for all blocks available in the registry.
+	   Example:
+	    "state_swapper": [
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:oak_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_leaves",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"distance": "7",
+	    				"persistent": "true"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_planks",
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_planks",
+	    			}
+	    		}
+	    	}
+	    ]
+	*/
+	"state_swapper": [],
+	/* A map of blocks that specifies what the "old" block is and what its "new" block is.
+	   Example:
+	   	"swapper": {
+	   		"minecraft:coarse_dirt": "minecraft:dirt",
+	   		"minecraft:diamond_block": "minecraft:emerald_block"
+	   	}
+	*/
+	"swapper": { 
+		// 1 9
+		"minecraft:dirt_path": "minecraft:gravel",
+
+		// 1 10
+		"minecraft:magma_block": "minecraft:gravel",
+		"minecraft:bone_block": "minecraft:stone",
+
+		// 1 13
+		// Natural Blocks
+		"minecraft:kelp_plant": "minecraft:water",
+		"minecraft:kelp": "minecraft:water",
+		"minecraft:sea_pickle": "minecraft:water",
+		"minecraft:seagrass": "minecraft:water",
+		"minecraft:tall_seagrass": "minecraft:water",
+
+		"minecraft:horn_coral_fan": "minecraft:water",
+		"minecraft:fire_coral_fan": "minecraft:water",
+		"minecraft:bubble_coral_fan": "minecraft:water",
+		"minecraft:brain_coral_fan": "minecraft:water",
+		"minecraft:tube_coral_fan": "minecraft:water",
+		"minecraft:dead_horn_coral_fan": "minecraft:water",
+		"minecraft:dead_fire_coral_fan": "minecraft:water",
+		"minecraft:dead_bubble_coral_fan": "minecraft:water",
+		"minecraft:dead_brain_coral_fan": "minecraft:water",
+		"minecraft:dead_tube_coral_fan": "minecraft:water",
+		
+		
+		// Other
+		"minecraft:blue_ice": "minecraft:packed_ice",
+
+		// 1 14
+		// Crafting Blocks and Containers
+//		"minecraft:sweet_berry_bush": "minecraft:air",
+		"minecraft:fletching_table": "minecraft:crafting_table",
+		"minecraft:barrel": "minecraft:air",
+		"minecraft:bell": "minecraft:air",
+		"minecraft:blast_furnace": "minecraft:furnace",
+
+		// Natural Blocks
+		"minecraft:cornflower": "minecraft:air",
+		"minecraft:pumpkin": "minecraft:carved_pumpkin",
+		"minecraft:bamboo": "minecraft:air",
+
+		// 1 15
+		"minecraft:bee_nest": "minecraft:air",
+		"minecraft:beehive": "minecraft:air",
+
+		// 1 16
+		"minecraft:shroomlight": "minecraft:glowstone",
+		"minecraft:gilded_blackstone": "minecraft:netherrack",
+		"minecraft:basalt": "minecraft:blackstone",
+		"minecraft:ancient_debris": "minecraft:netherrack",
+		"minecraft:crying_obsidian": "minecraft:obsidian",
+
+		// 1 17
+		// Natural Blocks
+		"minecraft:rooted_dirt": "minecraft:dirt",
+		"minecraft:glow_lichen": "minecraft:vine",
+		"minecraft:spore_blossom": "minecraft:air",
+		"minecraft:moss_block": "minecraft:mossy_cobblestone",
+		"minecraft:moss_carpet": "minecraft:air",
+		"minecraft:azalea_leaves": "minecraft:oak_leaves",
+		"minecraft:flowering_azalea_leaves": "minecraft:oak_leaves",
+		"minecraft:big_dripleaf_stem": "minecraft:air",
+		"minecraft:hanging_roots": "minecraft:air",
+		"minecraft:big_dripleaf": "minecraft:air",
+		"minecraft:small_dripleaf": "minecraft:air",
+
+		// Stones
+		"minecraft:tuff": "minecraft:stone",
+		"minecraft:smooth_basalt": "minecraft:stone",
+		"minecraft:calcite": "minecraft:stone",
+		"minecraft:deepslate": "minecraft:stone",
+		"minecraft:dripstone_block": "minecraft:stone",
+		"minecraft:pointed_dripstone": "minecraft:stone",
+
+		// Amethyst
+		"minecraft:amethyst_cluster": "minecraft:air",
+		"minecraft:small_amethyst_bud": "minecraft:air",
+		"minecraft:medium_amethyst_bud": "minecraft:air",
+		"minecraft:large_amethyst_bud": "minecraft:air",
+		"minecraft:budding_amethyst": "minecraft:stone",
+		"minecraft:amethyst_block": "minecraft:stone",
+		
+		"minecraft:copper_ore": "minecraft:stone",
+
+		// Deepslate ores
+		"minecraft:deepslate_coal_ore": "minecraft:coal_ore",
+		"minecraft:deepslate_diamond_ore": "minecraft:diamond_ore",
+		"minecraft:deepslate_emerald_ore": "minecraft:emerald_ore",
+		"minecraft:deepslate_gold_ore": "minecraft:gold_ore",
+		"minecraft:deepslate_iron_ore": "minecraft:iron_ore",
+		"minecraft:deepslate_lapis_ore": "minecraft:lapis_ore",
+		"minecraft:deepslate_redstone_ore": "minecraft:redstone_ore",
+		"minecraft:deepslate_copper_ore": "minecraft:stone",
+
+		// Raw ores
+		"minecraft:raw_copper_block": "minecraft:stone",
+		"minecraft:raw_gold_block": "minecraft:gold_ore",
+		"minecraft:raw_iron_block": "minecraft:iron_ore",		
+
+		// 1_19
+		// Ancient city
+		"minecraft:frogspawn": "minecraft:air",
+		"minecraft:reinforced_deepslate": "minecraft:chiseled_stone_bricks"
+	}
+}
+
+/*
+
+		"create:zinc_ore": "minecraft:stone",
+		"create:crimsite": "minecraft:stone",
+		"create:veridium": "minecraft:stone",
+		"create:scoria": "minecraft:stone",
+		"create:scorchia": "minecraft:stone",
+		"create:ochrum": "minecraft:stone",
+		"create:asurine": "minecraft:stone",
+		"create:limestone": "minecraft:stone",
+*/

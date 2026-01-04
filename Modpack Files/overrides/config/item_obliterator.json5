@@ -1,0 +1,641 @@
+{
+  // -----------------------------------------------------------
+  //              Item Obliterator by ElocinDev
+  // -----------------------------------------------------------
+  //  
+  // How to add items?
+  //   - They are json strings, so you need to separate each
+  //     entry with a comma, except the last
+  //   - If you start an entry with !, it will be treated as a regular expression
+  //     Example: "!minecraft:.*_sword" to disable all swords
+  //  
+  // -----------------------------------------------------------
+  // Do not touch this
+  "configVersion": 2,
+  // -----------------------------------------------------------
+  // Items here will be unusable completely
+  //    Example: minecraft:diamond
+  "blacklisted_items": [
+
+    // progression edits
+    "minecraft:wooden_pickaxe",
+    "minecraft:wooden_hoe", 
+
+    // misc
+    "minecraft:rabbit_hide",
+    "minecraft:experience_bottle",
+    "minecraft:enchanted_book",
+
+    // 1 9
+    "minecraft:dirt_path",
+    "minecraft:tipped_arrow",
+    "minecraft:spectral_arrow",
+    "minecraft:elytra",
+    "!minecraft:purpur_.*",
+    "minecraft:end_rod",
+    "!minecraft:chorus_.*",
+    "minecraft:popped_chorus_fruit",
+    "minecraft:shield",
+    "minecraft:birch_boat",
+    "minecraft:spruce_boat",
+    "minecraft:jungle_boat",
+    "minecraft:dark_oak_boat",
+    "minecraft:acacia_boat",
+
+    // 1 10
+    "minecraft:red_nether_bricks",
+    "minecraft:bone_block",
+    "minecraft:magma_block",
+
+    // 1 11
+    "minecraft:totem_of_undying",
+    "minecraft:shulker_box",
+    "!minecraft:.*_shulker_box",
+    "minecraft:shulker_shell",
+
+    // 1 12
+    "!minecraft:.*_glazed_terracotta",
+
+    "!minecraft:.*_concrete_powder",
+    "!minecraft:.*_concrete",
+    
+    "minecraft:blue_bed",
+    "minecraft:light_blue_bed",
+    "minecraft:cyan_bed",
+    
+    "minecraft:black_bed",
+    "minecraft:gray_bed",
+    "minecraft:light_gray_bed",
+    "minecraft:white_bed",
+    "minecraft:brown_bed",
+
+    "minecraft:green_bed",
+    "minecraft:lime_bed",
+
+    "minecraft:pink_bed",
+    "minecraft:purple_bed",
+    "minecraft:magenta_bed",
+
+    "minecraft:yellow_bed",
+    "minecraft:orange_bed",
+    
+    // 1 13 Extra buttons, trapdoors, signs, pressure plates
+    "minecraft:suspicious_stew",
+    "minecraft:petrified_oak_slab",
+    "minecraft:oak_wood",
+    "minecraft:spruce_wood",
+    "minecraft:birch_wood",
+    "minecraft:jungle_wood",
+    "minecraft:acacia_wood",
+    "minecraft:dark_oak_wood",
+    "minecraft:phantom_membrane",
+    "minecraft:birch_sign",
+    "minecraft:spruce_sign",
+    "minecraft:jungle_sign",
+    "minecraft:acacia_sign",
+    "minecraft:dark_oak_sign",
+    "minecraft:birch_button",
+    "minecraft:acacia_button",
+    "minecraft:jungle_button",
+    "minecraft:spruce_button",
+    "minecraft:dark_oak_button",
+    "minecraft:charcoal",
+    "minecraft:birch_trapdoor",
+    "minecraft:spruce_trapdoor",
+    "minecraft:dark_oak_trapdoor",
+    "minecraft:jungle_trapdoor",
+    "minecraft:acacia_trapdoor",
+    "minecraft:birch_pressure_plate",
+    "minecraft:spruce_pressure_plate",
+    "minecraft:dark_oak_pressure_plate",
+    "minecraft:jungle_pressure_plate",
+    "minecraft:acacia_pressure_plate",   
+
+    // Extra walls
+    "minecraft:brick_wall",
+    "minecraft:diorite_wall",
+    "minecraft:granite_wall",
+    "minecraft:andesite_wall",
+    "minecraft:sandstone_wall",
+    "minecraft:mud_brick_wall",
+    "minecraft:prismarine_wall",
+    "minecraft:stone_brick_wall",
+    "minecraft:red_sandstone_wall",
+    "minecraft:deepslate_tile_wall",
+    "minecraft:end_stone_brick_wall",
+    "minecraft:red_nether_brick_wall",
+    "minecraft:mossy_stone_brick_wall",
+
+    "minecraft:mossy_stone_brick_slab",
+    "minecraft:mossy_stone_brick_stairs",
+    "minecraft:mossy_cobblestone_slab",
+    "minecraft:mossy_cobblestone_stairs",
+
+    "minecraft:diorite_stairs",
+    "minecraft:polished_diorite_stairs",
+    "minecraft:diorite_slab",
+    "minecraft:polished_diorite_slab",
+    "minecraft:andesite_stairs",
+    "minecraft:polished_andesite_stairs",
+    "minecraft:andesite_slab",
+    "minecraft:polished_andesite_slab",    
+    "minecraft:granite_stairs",
+    "minecraft:polished_granite_stairs",
+    "minecraft:granite_slab",
+    "minecraft:polished_granite_slab",
+
+    "minecraft:trident",
+    "minecraft:sea_pickle",
+    "minecraft:seagrass",
+    "minecraft:kelp",
+    "minecraft:dried_kelp_block",
+    "minecraft:dried_kelp",
+    "!minecraft:.*_coral_fan",
+
+    "minecraft:turtle_egg",
+    "minecraft:scute",
+    "minecraft:turtle_helmet",
+    "minecraft:nautilus_shell",
+    
+    "minecraft:tropical_fish_bucket",
+    "minecraft:pufferfish_bucket",
+    "minecraft:cod_bucket",
+    "minecraft:salmon_bucket",
+
+    "minecraft:blue_ice",
+
+    // 1 14
+    "minecraft:cornflower",
+    "minecraft:stripped_dark_oak_wood",
+    "minecraft:stripped_spruce_log",
+    "minecraft:stripped_oak_wood",
+    "minecraft:stripped_birch_log",
+    "minecraft:stripped_dark_oak_log",
+    "minecraft:stripped_oak_log",
+    "minecraft:stripped_jungle_log",
+    "minecraft:stripped_birch_wood",
+    "minecraft:stripped_acacia_log",
+    "minecraft:stripped_acacia_wood",
+    "minecraft:stripped_spruce_wood",
+    "minecraft:stripped_jungle_wood",
+    "minecraft:red_nether_brick_slab",
+    "minecraft:red_nether_brick_stairs",
+    "minecraft:red_nether_brick_wall",
+    "!minecraft:smooth_red_sandstone.*",
+    "!minecraft:smooth_sandstone.*",
+    "!minecraft:smooth_quartz.*",
+    "minecraft:barrel",
+    "minecraft:composter",
+    "minecraft:smoker",
+    // Possibly returning
+    "minecraft:blast_furnace",
+    "minecraft:campfire",
+    "minecraft:soul_campfire",
+    "minecraft:bell",
+    "minecraft:smithing_table",
+    "minecraft:fletching_table",
+    "minecraft:stonecutter",
+    "minecraft:grindstone",
+    "minecraft:cartography_table",
+    // Staris and such
+    "minecraft:prismarine_stairs",
+    "minecraft:prismarine_brick_slab",
+    "minecraft:prismarine_brick_stairs",
+    "minecraft:prismarine_slab",
+    "minecraft:dark_prismarine_slab",
+    "minecraft:dark_prismarine_stairs",
+    "minecraft:stone_stairs",
+    "minecraft:stone_slab",
+    "minecraft:smooth_stone",
+
+    "minecraft:smooth_stone",
+    "minecraft:pumpkin",
+    "minecraft:stone_slab",
+
+    // 1 15
+    "minecraft:honeycomb",
+    "minecraft:honey_block",
+    "minecraft:honey_bottle",
+    "minecraft:honeycomb_block",
+    "minecraft:beehive",
+    "minecraft:bee_nest",
+
+    // 1 16
+    "minecraft:chain",
+    "minecraft:ancient_debris",
+    "minecraft:shroomlight",
+    "!minecraft:netherite_.*",
+    "minecraft:stripped_warped_stem",
+    "minecraft:twisting_vines",
+    "minecraft:nether_sprouts",
+    "minecraft:stripped_warped_hyphae",
+    "minecraft:crimson_hyphae",
+    "minecraft:stripped_crimson_hyphae",
+    "minecraft:stripped_crimson_stem",
+    "minecraft:gilded_blackstone",
+    "minecraft:polished_blackstone",
+    "minecraft:polished_blackstone_brick_slab",
+    "minecraft:polished_blackstone_wall",
+    "minecraft:polished_basalt",
+    "minecraft:basalt",
+    "minecraft:polished_blackstone_brick_stairs",
+    "minecraft:polished_blackstone_slab",
+    "minecraft:polished_blackstone_button",
+    "minecraft:polished_blackstone_bricks",
+    "minecraft:polished_blackstone_stairs",
+    "minecraft:polished_blackstone_pressure_plate",
+    "minecraft:polished_blackstone_brick_wall",
+    "minecraft:cracked_polished_blackstone_bricks",
+    "minecraft:chiseled_polished_blackstone",
+    "minecraft:nether_brick_wall",
+    "minecraft:cracked_nether_bricks",
+    "minecraft:chiseled_nether_bricks",
+
+    "minecraft:blackstone_wall",
+
+    // Blue wood
+    "minecraft:warped_fence_gate",
+    "minecraft:warped_pressure_plate",
+    "minecraft:warped_roots",
+    "minecraft:warped_nylium",
+    "minecraft:warped_planks",
+    "minecraft:warped_door",
+    "minecraft:warped_slab",
+    "minecraft:warped_hyphae",
+    "minecraft:warped_fungus_on_a_stick",
+    "minecraft:warped_stairs",
+    "minecraft:warped_trapdoor",
+    "minecraft:warped_stem",
+    "minecraft:warped_button",
+    "minecraft:warped_wart_block",
+    "minecraft:warped_fungus",
+    "minecraft:warped_fence",
+    "minecraft:warped_sign",
+
+    // Crimson extra stuff
+    "minecraft:crimson_sign",
+    "minecraft:crimson_button",
+    "minecraft:crimson_trapdoor",
+    "minecraft:crimson_pressure_plate",
+
+    "minecraft:crying_obsidian",
+    "minecraft:respawn_anchor",
+
+    // 1 17
+    "minecraft:glow_ink_sac",
+    "minecraft:glow_item_frame",
+    "minecraft:hanging_roots",
+    "minecraft:rooted_dirt",
+    "!minecraft:.*candle",
+
+    "minecraft:dripstone_block",
+    "minecraft:pointed_dripstone",
+    "minecraft:big_dripleaf",
+    "minecraft:small_dripleaf",
+    "minecraft:spore_blossom",
+    "minecraft:glow_lichen",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_cluster",
+    "!minecraft:.*_amethyst_bud",
+    "minecraft:budding_amethyst",
+    "minecraft:amethyst_block",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron_block",
+    "minecraft:raw_copper",
+    "minecraft:raw_copper_block",
+    "minecraft:raw_gold",
+    "minecraft:raw_gold_block",
+    "!minecraft:.*copper.*",
+    "minecraft:lightning_rod",
+    "minecraft:tinted_glass",
+    "!minecraft:.*_candle",
+    "minecraft:azalea_leaves",
+    "minecraft:azalea",
+    "minecraft:flowering_azalea_leaves",
+    "minecraft:flowering_azalea",
+    "minecraft:moss_block",
+    "minecraft:moss_carpet",
+    "minecraft:goat_horn",
+    "minecraft:glow_item_frame",
+    "minecraft:axolotl_bucket",
+
+    // Stones
+    "minecraft:tuff",
+    "minecraft:smooth_basalt",
+    "minecraft:calcite",
+
+    // Ores
+    "minecraft:chiseled_deepslate",
+    "!minecraft:deepslate_.*_ore",
+    "!minecraft:deepslate.*",
+    "!minecraft:.*deepslate",
+    "minecraft:polished_deepslate_slab",
+    "minecraft:polished_deepslate_stairs",
+    "minecraft:cobbled_deepslate_stairs",
+    "minecraft:cobbled_deepslate_slab",
+
+    // Decorations
+    "minecraft:cracked_deepslate_tiles",
+    "minecraft:cracked_deepslate_bricks",
+    "minecraft:deepslate_brick_wall",
+    "minecraft:cobbled_deepslate_wall",
+    "minecraft:polished_deepslate_wall", 
+    "!minecraft:deepslate_tile.*",
+    "minecraft:music_disc_otherside",
+
+    // 1 19
+    "minecraft:stripped_mangrove_log",
+    "minecraft:stripped_mangrove_wood",
+    "!minecraft:mangrove_.*",
+    "minecraft:mangrove_planks",
+    "minecraft:reinforced_deepslate",
+    "!minecraft:.*mud.*",
+    "minecraft:tadpole_bucket",
+
+    // boats
+    "minecraft:birch_chest_boat",
+    "minecraft:spruce_chest_boat",
+    "minecraft:jungle_chest_boat",
+    "minecraft:acacia_chest_boat",
+    "minecraft:dark_oak_chest_boat",
+
+    // frogs
+    "minecraft:frogspawn",
+    "minecraft:ochre_froglight",
+    "minecraft:verdant_froglight",
+    "minecraft:pearlescent_froglight",
+    
+    // Ancient cities
+    "minecraft:music_disc_5",
+    "minecraft:disc_fragment_5",
+    "minecraft:echo_shard",
+    "minecraft:sculk_sensor",
+    "minecraft:sculk_shrieker",
+    "!minecraft:sculk.*",
+
+    // 1 20
+    "!minecraft:.*_trim",
+    "!minecraft:.*_smithing_template",
+    
+    // Sculk
+    "minecraft:calibrated_sculk_sensor",
+
+    // Archeology
+    "minecraft:brush",
+    "minecraft:decorated_pot",
+    "!minecraft:.*pottery_sherd",
+    "minecraft:music_disc_relic",
+    "minecraft:suspicious_gravel",
+    "minecraft:suspicious_sand",
+    "minecraft:music_disc_relic",
+
+    // Decoration
+    "minecraft:pink_petals",
+    "minecraft:chiseled_bookshelf",
+    "!minecraft:.*_hanging_sign",
+    "minecraft:piglin_head",
+
+    // Sniffer
+    "minecraft:sniffer_egg",
+    "minecraft:pitcher_pod",
+    "minecraft:pitcher_plant",
+    "minecraft:torchflower_seeds",
+    "minecraft:torchflower",
+
+    // Wood types
+    "minecraft:bamboo_fence_gate",
+    "minecraft:bamboo_mosaic",
+    "minecraft:bamboo_chest_raft",
+    "minecraft:bamboo_planks",
+    "minecraft:bamboo_pressure_plate",
+    "minecraft:bamboo_door",
+    "minecraft:bamboo_raft",
+    "minecraft:bamboo_trapdoor",
+    "minecraft:bamboo_stairs",
+    "minecraft:bamboo_block",
+    "minecraft:bamboo",
+    "minecraft:bamboo_mosaic_stairs",
+    "minecraft:bamboo_slab",
+    "minecraft:bamboo_mosaic_slab",
+    "minecraft:bamboo_button",
+    "minecraft:bamboo_hanging_sign",
+    "minecraft:bamboo_sign",
+    "minecraft:bamboo_fence",
+    "minecraft:stripped_bamboo_block",
+    "!minecraft:cherry_.*",
+
+    "minecraft:cherry_sapling",
+    "minecraft:cherry_fence",
+    "minecraft:cherry_door",
+    "minecraft:cherry_planks",
+    "minecraft:cherry_boat",
+    "minecraft:cherry_leaves",
+    "minecraft:cherry_pressure_plate",
+    "minecraft:cherry_log",
+    "minecraft:cherry_button",
+    "minecraft:cherry_chest_boat",
+    "minecraft:cherry_slab",
+    "minecraft:cherry_sign",
+    "minecraft:cherry_trapdoor",
+    "minecraft:cherry_hanging_sign",
+    "minecraft:cherry_stairs",
+    "minecraft:cherry_wood",
+    "minecraft:cherry_fence_gate",
+    "minecraft:stripped_cherry_wood",
+    "minecraft:stripped_cherry_log",
+
+    // Essence
+    "!elementary-staffs:.*vampire",
+    "!elementary-staffs:.*electric",
+    "!elementary-staffs:staff/darkness",
+    "!elementary-staffs:staff/poison",
+    "elementary-staffs:arrow/fire",
+    "elementary-staffs:arrow/water",
+    "elementary-staffs:arrow/poison",
+    "elementary-staffs:arrow/ice",
+    "elementary-staffs:arrow/wind",
+    "elementary-staffs:arrow/dark",
+    "elementary-staffs:arrow/life",
+    "elementary-staffs:grenade/dark",
+    "elementary-staffs:grenade/life",
+    "elementary-staffs:grenade/poison",
+    "elementary-staffs:grenade/water",
+    "elementary-staffs:grenade/wind",
+    "elementary-staffs:grenade/ice",
+    "elementary-staffs:staff",
+    "!elementary-staffs:essence/.*",
+
+    // Spawn eggs
+    "minecraft:piglin_spawn_egg",
+    "minecraft:piglin_brute_spawn_egg",
+    "minecraft:hoglin_spawn_egg",
+    "minecraft:zoglin_spawn_egg",
+    "minecraft:strider_spawn_egg",
+    "minecraft:vindicator_spawn_egg",
+    "minecraft:pillager_spawn_egg",
+    "minecraft:camel_spawn_egg",
+    "minecraft:sniffer_spawn_egg",
+    "minecraft:ravager_spawn_egg",
+    "minecraft:phantom_spawn_egg",
+    "minecraft:drowned_spawn_egg",
+    "minecraft:husk_spawn_egg",
+    "minecraft:stray_spawn_egg",
+    "minecraft:shulker_spawn_egg",
+    "minecraft:warden_spawn_egg",
+    "minecraft:zombie_villager_spawn_egg",
+    "minecraft:allay_spawn_egg",
+    "minecraft:axolotl_spawn_egg",
+    "minecraft:cod_spawn_egg",
+    "minecraft:salmon_spawn_egg",
+    "minecraft:tropical_fish_spawn_egg",
+    "minecraft:pufferfish_spawn_egg",
+    "minecraft:frog_spawn_egg",
+    "minecraft:tadpole_spawn_egg",
+    "minecraft:glow_squid_spawn_egg",
+    "minecraft:parrot_spawn_egg",
+    "minecraft:rabbit_spawn_egg",
+    "minecraft:turtle_spawn_egg",
+    "minecraft:dolphin_spawn_egg",
+    "minecraft:bee_spawn_egg",
+    "minecraft:sniffer_spawn_egg",
+    "minecraft:fox_spawn_egg",
+    "minecraft:polar_bear_spawn_egg",
+    "minecraft:goat_spawn_egg",
+    "minecraft:llama_spawn_egg",
+    "minecraft:trader_llama_spawn_egg",
+    "minecraft:panda_spawn_egg",
+    "minecraft:villager_spawn_egg",
+    "minecraft:trader_llama_spawn_egg",
+
+    // supplementaries
+    "supplementaries:raked_gravel",
+    "supplementaries:flax_seeds",
+    "supplementaries:flax_block",
+    "supplementaries:flax",
+    "supplementaries:wild_flax",
+    "supplementaries:gravel_bricks",
+    "supplementaries:suspicious_gravel_bricks",
+    "!supplementaries:ash.*",
+    "!supplementaries:trapped_present.*",
+    "supplementaries:bomb",
+    "supplementaries:bomb_projectile",
+    "supplementaries:antique_ink",
+    "supplementaries:globe_sepia",
+    "supplementaries:soap",
+    "supplementaries:soap_block",
+    "supplementaries:lumisene_bucket",
+    "supplementaries:lumisene_bottle",
+    "supplementaries:slidy_block",
+    "supplementaries:candy",
+    "supplementaries:confetti_popper",
+    "supplementaries:lunch_basket",
+    "supplementaries:sack",
+    "supplementaries:wrench",
+    "supplementaries:rope_arrow",
+    "supplementaries:checker_block",
+    "supplementaries:checker_slab",
+    "!supplementaries:lapis_bricks.*",
+    "!supplementaries:.*_lamp",
+    "!supplementaries:sign_post_.*",
+    "supplementaries:bamboo_spikes_tipped",
+    "!supplementaries:awning.*",
+    "supplementaries:bunting",
+    "!supplementaries:.*tile.*",
+    "supplementaries:cage",
+    "supplementaries:bubble_blower",
+    "supplementaries:timber_frame",
+    "supplementaries:daub_frame",
+    "supplementaries:daub_cross_brace",
+    "supplementaries:daub_brace",
+    "supplementaries:daub",
+    "!supplementaries:candle_holder.*",
+    "supplementaries:fine_wood",
+    "supplementaries:fine_wood_slab",
+    "supplementaries:fine_wood_stairs",
+    "supplementaries:wicker_fence",
+    "supplementaries:crystal_display",
+    "supplementaries:rope",
+    "supplementaries:timber_frame",
+    "supplementaries:timber_brace",
+    "supplementaries:timber_cross_brace",
+    "supplementaries:planter",
+    "supplementaries:flower_box",
+    "supplementaries:gold_gate",
+    "supplementaries:iron_gate",
+    "supplementaries:sugar_cube",
+    "supplementaries:gold_door",
+    "supplementaries:gold_trapdoor",
+    "supplementaries:fire_pit",
+    "!supplementaries:sconce.*",
+    "supplementaries:bubble_block",
+    "supplementaries:faucet",
+    "supplementaries:turn_table",
+    "supplementaries:fodder",
+    "supplementaries:jar",
+    "supplementaries:jar_boat",
+    "supplementaries:redstone_illuminator",
+    "supplementaries:pulley_block",
+    "supplementaries:relayer",
+    "supplementaries:spring_launcher",
+    "supplementaries:lock_block",
+    "supplementaries:cog_block",
+    "supplementaries:blackboard",
+    "supplementaries:quiver",
+    "supplementaries:pedestal",
+    "supplementaries:slice_map",
+    "supplementaries:altimeter",
+    "supplementaries:slingshot",
+    "supplementaries:bomb_spiky",
+    "supplementaries:crank",
+    "supplementaries:statue",
+    "supplementaries:speaker_block",
+    "supplementaries:item_shelf",
+    "supplementaries:doormat",
+    "supplementaries:feather_block",
+    "supplementaries:flint_block",
+    "supplementaries:bellows",
+
+    // To re-add
+    "supplementaries:safe",
+    "supplementaries:key",
+    "!supplementaries:netherite_.*",
+    "supplementaries:wind_vane",
+    "supplementaries:goblet"
+
+  ],
+  // -----------------------------------------------------------
+  // Removes an item if it contains certain nbt tag. If the whole entry (or expression) is present, the item gets removed.
+  // Use with caution! This is a very expensive operation and can cause lag if you have a lot of items blacklisted.
+  // 	
+  // 	 Example to disable a regeneration potion: Potion:"minecraft:regeneration"
+  // 	
+  // 	 You can also use regular expressions by starting the value with !
+  "blacklisted_nbt": [
+  ],
+  // -----------------------------------------------------------
+  // Items here will not be able to be right-clicked (Interact)
+  //    Example: minecraft:apple
+  "only_disable_interactions": [
+    "examplemod:example_item"
+  ],
+  // -----------------------------------------------------------
+  // Items here will not be able to be used to attack
+  //    Example: minecraft:diamond_sword
+  "only_disable_attacks": [
+    "examplemod:example_item"
+  ],
+  // -----------------------------------------------------------
+  // Items here will get their recipes disabled
+  // Keep in mind this already is applied to blacklisted items
+  "only_disable_recipes": [
+    "examplemod:example_item"
+  ],
+  // -----------------------------------------------------------
+  // If true, the mod will use a hashset to handle the blacklisted items
+  // This is a more optimized approach only if you have a lot of items blacklisted (20 or more is recommended)
+  // If you just have a small amount of items blacklisted, keep this false
+  //  
+  // [!] Enabling this will disable all regular expressions
+  // [!] Does not apply to NBT, only item blacklist / interaction / attack
+  "use_hashmap_optimizations": false
+}

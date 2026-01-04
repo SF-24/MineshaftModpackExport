@@ -1,0 +1,17 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:rail"
+    },
+    "title": "On A Rail",
+    "description": "Travel by minecart at least 1 km from where you started.",
+    "frame": "goal"
+  },
+  "parent": "old_achievements:overworld/acquire_iron",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible",
+      "conditions": {}
+    }
+  }
+}

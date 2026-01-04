@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wheat"
+    },
+    "title": "Repopulation",
+    "description": "Breed two cows with wheat.",
+    "frame": "task"
+  },
+  "parent": "old_achievements:overworld/kill_cow",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": {
+          "type": "minecraft:cow"
+        },
+        "partner": {
+          "type": "minecraft:cow"
+        }
+      }
+    }
+  }
+}
