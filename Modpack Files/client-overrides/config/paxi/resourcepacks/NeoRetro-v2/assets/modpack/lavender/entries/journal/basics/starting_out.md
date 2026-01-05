@@ -3,16 +3,17 @@
   "title": "Basic Survival",
   "icon": "minecraft:oak_log",
   "category": "modpack:getting_started",
-  "associated_items": [],
-  "ordinal": 1
+  "associated_items": []
 }
 ```
 
-You may have noticed that upon starting your inventory is not empty. The bundle allows you to store a stack of items.
+I have appeared in a desolate world.
 
-To begin, you should first look for some trees and collect some logs. 
+It seems I have some stuff with me, the bundle may come in useful to store some of my stuff...
+
+I should probably look for some trees to gather logs.
 \
-You can craft it into planks and a Workbench using the crafting grid in your inventory.
+Then make planks and a crafting table.
 
 ;;;;;
 

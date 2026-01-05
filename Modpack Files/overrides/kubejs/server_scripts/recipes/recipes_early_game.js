@@ -17,7 +17,7 @@ ServerEvents.recipes(event=>{
             "2x minecraft:stick",
             "minecraft:string"
         ]
-    )
+    ).id("kubejs:fire_drill")
 
     event.shapeless(
         Item.of("kubejs:fire_drill"),
