@@ -1,0 +1,2 @@
+https://api.modrinth.com/v2/version/<ver>
+Where <ver> is the version code

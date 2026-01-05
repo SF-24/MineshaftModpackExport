@@ -1,0 +1,30 @@
+{
+  "downloads": [
+    "https://cdn.modrinth.com/data/BFzJ6aQL/versions/BVnv30U5/golden-days-base-1.21.x-1.14.0.zip"
+  ],
+  "env": {
+    "client": "required",
+    "server": "unsupported"
+  },
+  "fileSize": 5577846,
+  "hashes": {
+    "sha1": "05a2c9a16f4eabcd3f53ecb441c78d67eec8f96f",
+    "sha512": "392a96a3c17f0df3d9b0122f61ff666bb52eec26eeb7a3cd66f5f988eb753d602bd5a615dde25280bde1c791249e6267b2827faa820e795c51915607f6631e59"
+  },
+  "path": "config/paxi/resourcepacks/golden-days-base-1.21.x-1.14.0.zip"
+},
+{
+  "downloads": [
+    "https://cdn.modrinth.com/data/k5E8cAZw/versions/9qAphQna/Golden%20Days%20Mod%20Compat.zip"
+  ],
+  "env": {
+    "client": "required",
+    "server": "unsupported"
+  },
+  "fileSize": 21493900,
+  "hashes": {
+    "sha1": "ce6c15265ef7d412d48cec928aa9a493521fc7f1",
+    "sha512": "513f0ffa24f7d6dc8300d2189d39b04abb6be33fb4411622b6abf768d155ded634b862acdbb4aa9b25ed5221dd009ba89b525e5346de53195bcfea8c087ad12b"
+  },
+  "path": "config/paxi/resourcepacks/Golden Days Mod Compat.zip"
+}

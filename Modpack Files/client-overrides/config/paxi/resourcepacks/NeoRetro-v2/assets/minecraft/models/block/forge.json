@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "east": "minecraft:block/forge_side",
+    "north": "minecraft:block/forge_front",
+    "particle": "minecraft:block/forge_front",
+    "south": "minecraft:block/forge_side",
+    "up": "minecraft:block/forge_top",
+    "west": "minecraft:block/forge_front"
+  }
+}
