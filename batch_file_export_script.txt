@@ -1,0 +1,61 @@
+@echo off
+set "ovr="OVERRIDE PATH HERE""
+set "cli="CLIENT OVERRIDE PATH HERE""
+
+echo Global overrides: "%ovr%"
+echo Client overrides: "%cli%"
+
+echo Copying files...
+
+:: Global configs
+robocopy config/blockswap %ovr%/config/blockswap block_swap.json5 /im
+robocopy config/eso %ovr%/config/eso /s /im
+robocopy config/jade %ovr%/config/jade hide-blocks.json /im
+robocopy config/jade %ovr%/config/jade hide-entities.json /im
+robocopy config/jade %ovr%/config/jade jade.json /im
+robocopy config/jade %ovr%/config/jade plugins.json /im
+robocopy config/jade %ovr%/config/jade sort-order.json /im
+robocopy config/nostalgic_tweaks %ovr%/config/nostalgic_tweaks nostalgic_tweaks.json /im
+robocopy config/paxi %ovr%/config/paxi datapack_load_order.json /im
+robocopy config/paxi/datapacks %ovr%/config/paxi/datapacks /s /im
+robocopy config/ysns %ovr%/config/ysns /s /im
+
+robocopy config %ovr%/config biome_replacer.properties /im
+robocopy config %ovr%/config default_world_preset.txt /im
+robocopy config %ovr%/config elementary-staffs.json5 /im
+robocopy config %ovr%/config enchantment_groups.json /im
+robocopy config %ovr%/config enchantmentdisabler-config.json5 /im
+robocopy config %ovr%/config giantspawn.json5 /im
+robocopy config %ovr%/config immediatelyfast.json /im
+robocopy config %ovr%/config item_obliterator.json5 /im
+robocopy config %ovr%/config moderner_beta.json /im
+robocopy config %ovr%/config no_xp_anvils.json /im
+robocopy config %ovr%/config nox.json /im
+robocopy config %ovr%/config preferred-gamerules.properties /im
+robocopy config %ovr%/config skeletonaifix-server.toml /im
+robocopy config %ovr%/config sparsestructures.json5 /im
+robocopy config %ovr%/config stackables.toml /im
+robocopy config %ovr%/config supplementaries-common.json /im
+
+:: Client configs
+robocopy config/paxi %cli%/config/paxi resourcepack_load_order.json /im
+robocopy config/paxi/resourcepacks %cli%/config/paxi/resourcepacks /s /im
+robocopy config/defaultoptions %cli%/config/defaultoptions /s /im
+robocopy config %cli%/config clean_tooltips-client.toml /im
+robocopy config %cli%/config cull-less-leaves.json /im
+robocopy config %cli%/config defaultoptions-common.toml /im
+robocopy config %cli%/config supplementaries-client.json /im
+robocopy config %cli%/config timeless.json /im
+
+:: Hordes mod
+robocopy . %ovr% hordeJsonData.json /im
+
+:: KubeJS
+robocopy kubejs/startup_scripts %ovr%/kubejs/startup_scripts /im /s
+robocopy kubejs/server_scripts %ovr%/kubejs/server_scripts /im /s
+robocopy kubejs/client_scripts %cli%/kubejs/client_scripts /im /s
+robocopy kubejs/assets %cli%/kubejs/assets /im /s
+
+echo Finished!
+
+pause

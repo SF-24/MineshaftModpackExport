@@ -7,4 +7,8 @@ ServerEvents.loaded(event => {
     console.log("Kubejs: Running /reload command to bypass bugs.")
     Utils.getServer().runCommand("reload")
     global.reloaded_startup = true
+
+    if (!Utils.getServer().persistentData.contains('nether_discovered')) {  
+        Utils.getServer().persistentData.putBoolean('nether_discovered', false)  
+    } 
 })
